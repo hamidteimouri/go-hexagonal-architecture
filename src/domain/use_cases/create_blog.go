@@ -2,9 +2,9 @@ package use_cases
 
 import (
 	"context"
-	"github.com/hamidteimouri/go-hexagonal-architecture/src/domain/repositories"
+	"github.com/hamidteimouri/go-hexagonal-architecture/domain/repositories"
 
-	"github.com/hamidteimouri/go-hexagonal-architecture/src/domain/entities"
+	"github.com/hamidteimouri/go-hexagonal-architecture/domain/entities"
 )
 
 type CreateBlogInterface interface {
@@ -22,6 +22,7 @@ type createBlog struct {
 }
 
 func (obj createBlog) Call(ctx context.Context, b entities.Blog) (*entities.Blog, error) {
+	// todo : log and use error handling here
 	blog, err := obj.repo.Create(ctx, b)
 	if err != nil {
 		return nil, err

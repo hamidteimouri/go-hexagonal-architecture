@@ -2,8 +2,7 @@ package repositories
 
 import (
 	"context"
-
-	"github.com/hamidteimouri/go-hexagonal-architecture/src/domain/entities"
+	"github.com/hamidteimouri/go-hexagonal-architecture/domain/entities"
 )
 
 
